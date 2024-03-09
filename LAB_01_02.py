@@ -16,7 +16,8 @@ Ejercicio 2
 2) Solicita un número al usuario y determina si es par o impar
 """
 num = int(input("Ingrese un número: "))
-
+# el porcentaje es el que nos permite identificar el resto de una operacion y asi poder saber
+#si es par o no
 if num % 2 == 0:
     print(num, "es par.")
 else:
@@ -30,8 +31,11 @@ else:
 
 """
 print("AREA DEL TRIANGULO")
+#pedimos una entrada puede ser o bien de tipO ENTERO O FLOTANTE
+#EN ESTE CASO PUSE COMO EJEMPLO COMO ENTRADA UN NUMERO ENTERO
 num1 = int(input("ingrese el numero de la base del triangulo: "))
 num2 = int(input("ingrese la la altura del triangulo: "))
+# ESTA OPERACION HARA LA OPERACION BASE X ALTURA ENTRE 2
 operacion = (num1*num2)/2
 print(operacion)
 #%%
@@ -72,17 +76,16 @@ print(primo(numero))
 EJercicio 6
 Toma una cadena de texto y muestra su inversión.
 """
-def cadena(string):
-    if len(string) == 0:
-        return string
-    else:
-        return cadena(string[1:]) + string[0]
+
+def inversion(cadena):
+    #en esta linea de codigo devuelve la linea de codigo
+    return cadena[::-1]
+
+texto = input("escribe una palabra: ")
+print("Texto original:", texto)
+print("Texto invertido:", inversion(texto))
 
 
-string = input("ingresa un texto: ")
-
-print("resultado : ", end="")
-print(cadena(string))
 #%%
 """
 Ejercicio 7
@@ -94,8 +97,22 @@ suma=0
 while i <= f:
     if i % 2 ==0: 
         print(i)
-        suma = suma + i
+        suma += i
     i+= 1
+
+#%%
+"""
+Ejercicio 8
+Crea una lista de los cuadrados de los primeros 10 números naturales"""
+#el range es hasta 11 ya que no incluye el
+for i in range(1, 11):
+    #usamos end para que este en forma horizontal
+    print(i**2, end=", ")
+#%%
+"""
+Ejercicio 9
+Cuenta el número de vocales en una cadena de texto.
+"""
 
 
 #%%
