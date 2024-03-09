@@ -43,13 +43,15 @@ print(operacion)
 3) Crea una función que calcule la factorial de un número.
 """
 def funcion(n):
-    if n == 0 or n==1:
+    if n == 0 or n==1: #como sabemos el numero factorial si es 0 o 1 sera el mismo resultado asi que creamos una condicion
         resultado = 1
     elif n >1:
+        #aplicamos la recursividad que la linea se empezara a ejecutar de el 1 sumandose hsata donde el usuario
+        #Haya puesto el numero
         resultado = n*funcion(n-1)
     return resultado
 numero = int(input("ingrese un numero: "))
-
+#igualamos la funcion a nyuesta entrada numero
 print(funcion(numero))
 
 
@@ -59,9 +61,10 @@ ejercicio 5
 Verifica si un número ingresado por el usuario es primo o no.
 
 """
-
+#
 def primo(num):
     for i in range(2, num):
+        #idetificamos el resto de la opracion
         if num % i == 0:
             print("No es primo", i, "es divisor")
             return False
@@ -134,9 +137,11 @@ while True:
 
 """
 palabra = input("ingrese una palabra: ")
-palabra_resulta = palabra[::-1]
+palabra_resulta = palabra[::-1] #esta linea verifica la palabra que va del ultimo y verifica si es palindromo o no
 if(palabra == palabra_resulta):
     print("es palindromo")
 else:
     print("no es palindromo")
 
+
+# %%
