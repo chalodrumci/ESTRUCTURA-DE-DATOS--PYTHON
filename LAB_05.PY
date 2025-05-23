@@ -95,7 +95,11 @@ palíndromos."""
 ejercicio 9
 9. Escriba una función que reciba un conjunto de palabras y devuelva un conjunto con las palabras que 
 tienen una longitud determinada."""
+def palabras_con_longitud(palabras, longitud):
+    return {palabra for palabra in palabras if len(palabra) == longitud}
 
+# Ejemplo de uso:
+# print(palabras_con_longitud({"hola", "mundo", "python", "sol"}, 4))  # Salida: {'hola', 'mundo'}
 """============================================================================================================
 ejercicio 10
 10. Escriba una función que reciba un conjunto de palabras y devuelva un conjunto con las palabras que 
